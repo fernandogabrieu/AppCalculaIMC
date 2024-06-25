@@ -13,14 +13,14 @@ Este é meu primeiro aplicativo desenvolvido. A Calculadora de IMC é uma aplica
 
 ## Capturas de Tela:
 
-![Captura de Tela 1](app/images/screenshot1.png)
-![Captura de Tela 2](app/images/screenshot2.png)
-![Captura de Tela 3](app/images/screenshot3.png)
-![Captura de Tela 4](app/images/screenshot4.png)
-![Captura de Tela 5](app/images/screenshot5.png)
-![Captura de Tela 6](app/images/screenshot6.png)
-![Captura de Tela 7](app/images/screenshot7.png)
-![Captura de Tela 8](app/images/screenshot8.png)
+![Captura de Tela 1](./app/images/screenshot1.png)
+![Captura de Tela 2](./app/images/screenshot2.png)
+![Captura de Tela 3](./app/images/screenshot3.png)
+![Captura de Tela 4](./app/images/screenshot4.png)
+![Captura de Tela 5](./app/images/screenshot5.png)
+![Captura de Tela 6](./app/images/screenshot6.png)
+![Captura de Tela 7](./app/images/screenshot7.png)
+![Captura de Tela 8](./app/images/screenshot8.png)
 
 ## Para utilizar:
 1. Faça o download do código fonte.
