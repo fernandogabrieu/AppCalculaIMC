@@ -1,424 +1,432 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue700"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/tvAppTittle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/calculadora_de_imc"
-        android:textColor="@color/white"
-        android:textSize="25sp"
-        android:textStyle="bold" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tvPeso"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:hint="@string/peso_em_kg"
-        android:textColorHint="@color/white"
-        app:boxStrokeColor="@null"
-        app:hintTextColor="@color/white">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etPeso"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:textColor="@color/white"
-            android:textCursorDrawable="@null"
-            tools:ignore="VisualLintTextFieldSize" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tvAltura"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:hint="@string/altura_em_m"
-        android:textColorHint="@color/white"
-        app:hintTextColor="@color/white"
-        app:boxStrokeColor="@null">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etAltura"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textCursorDrawable="@null"
-            tools:ignore="VisualLintTextFieldSize" />
-    </com.google.android.material.textfield.TextInputLayout>
+    android:fillViewport="true">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="horizontal"
-        android:paddingVertical="10dp">
-
-        <Button
-            android:id="@+id/btCalcular"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/DarkBlue"
-            android:onClick="btCalcularOnClick"
-            android:text="@string/calcular"
-            android:textColor="@color/white" />
-
-        <Space
-            android:layout_width="12dp"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:id="@+id/btLimpar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/DarkBlue"
-            android:text="@string/limpar"
-            android:textColor="@color/white" />
-
-    </LinearLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/layout_bg">
+        android:layout_height="wrap_content"
+        android:background="@color/blue700"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
 
         <TextView
-            android:id="@+id/tvResultadoEscrito"
+            android:id="@+id/tvAppTittle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:fontFamily="@font/montserrat_extrabold"
-            android:textColor="@color/black"
+            android:text="@string/calculadora_de_imc"
+            android:textColor="@color/white"
             android:textSize="25sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="HardcodedText" />
+            android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tvDiferencaPesoIdeal"
-            android:layout_width="wrap_content"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tvPeso"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:fontFamily="@font/montserrat_extrabold"
-            android:textSize="15sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvResultadoEscrito"
-            tools:ignore="HardcodedText" />
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:hint="@string/peso_em_kg"
+            android:textColorHint="@color/white"
+            app:boxStrokeColor="@null"
+            app:hintTextColor="@color/white">
 
-        <TextView
-            android:id="@+id/tvResultado"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPeso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:textColor="@color/white"
+                android:textCursorDrawable="@null"
+                tools:ignore="VisualLintTextFieldSize" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tvAltura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:hint="@string/altura_em_m"
+            android:textColorHint="@color/white"
+            app:boxStrokeColor="@null"
+            app:hintTextColor="@color/white">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAltura"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textCursorDrawable="@null"
+                tools:ignore="VisualLintTextFieldSize" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:fontFamily="@font/montserrat_extrabold"
-            android:textColor="@color/black"
-            android:textSize="60sp"
-            app:layout_constraintBaseline_toBaselineOf="@id/tvDiferencaPesoIdeal"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:ignore="HardcodedText" />
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:paddingVertical="10dp">
 
-        <com.ekn.gruzer.gaugelibrary.HalfGauge
-            android:id="@+id/halfGauge"
-            android:layout_width="wrap_content"
-            android:layout_height="200dp"
-            android:importantForAccessibility="no"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvResultado" />
+            <Button
+                android:id="@+id/btCalcular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/DarkBlue"
+                android:onClick="btCalcularOnClick"
+                android:text="@string/calcular"
+                android:textColor="@color/white" />
+
+            <Space
+                android:layout_width="12dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btLimpar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/DarkBlue"
+                android:text="@string/limpar"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:clipToPadding="false"
-            android:paddingHorizontal="80dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/halfGauge">
+            android:layout_height="match_parent"
+            android:background="@drawable/layout_bg">
 
-            <ImageView
-                android:id="@+id/ivCircleVeryLow"
+            <TextView
+                android:id="@+id/tvResultadoEscrito"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:importantForAccessibility="no"
-                android:src="@drawable/ic_circle_very_low"
-                app:layout_constraintBottom_toTopOf="@id/tvLow"
-                app:layout_constraintEnd_toStartOf="@id/tvVeryLow"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/montserrat_extrabold"
+                android:textColor="@color/black"
+                android:textSize="25sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
 
             <TextView
-                android:id="@+id/tvVeryLow"
+                android:id="@+id/tvDiferencaPesoIdeal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="3dp"
-                android:fontFamily="@font/montserrat_regular"
-                android:text="@string/muito_abaixo_do_peso"
-                android:textColor="@color/black"
-                app:layout_constraintStart_toEndOf="@id/ivCircleVeryLow"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/montserrat_extrabold"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvResultadoEscrito"
+                tools:ignore="HardcodedText" />
 
             <TextView
-                android:id="@+id/tvVeryLowNumber"
+                android:id="@+id/tvResultado"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/montserrat_regular"
-                android:text="@string/_16_0_16_9"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/montserrat_extrabold"
                 android:textColor="@color/black"
-                app:layout_constraintBottom_toBottomOf="@+id/tvVeryLow"
+                android:textSize="60sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/tvDiferencaPesoIdeal"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/tvVeryLow" />
+                tools:ignore="HardcodedText" />
 
-            <ImageView
-                android:id="@+id/ivCircleLow"
+            <com.ekn.gruzer.gaugelibrary.HalfGauge
+                android:id="@+id/halfGauge"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="200dp"
                 android:importantForAccessibility="no"
-                android:src="@drawable/ic_circle_low"
-                app:layout_constraintBottom_toTopOf="@id/tvNormal"
-                app:layout_constraintEnd_toStartOf="@id/tvLow"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvVeryLow"
-                tools:ignore="ImageContrastCheck" />
+                app:layout_constraintTop_toBottomOf="@+id/tvResultado" />
 
-            <TextView
-                android:id="@+id/tvLow"
-                android:layout_width="wrap_content"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clInferior"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="3dp"
-                android:layout_marginTop="3dp"
-                android:fontFamily="@font/montserrat_regular"
-                android:text="@string/abaixo_do_peso"
-                android:textColor="@color/black"
-                app:layout_constraintStart_toEndOf="@id/ivCircleLow"
-                app:layout_constraintTop_toBottomOf="@id/tvVeryLow" />
-
-            <TextView
-                android:id="@+id/tvLowNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/montserrat_regular"
-                android:importantForAccessibility="no"
-                android:text="@string/_17_0_18_4"
-                android:textColor="@color/black"
-                app:layout_constraintBottom_toBottomOf="@+id/tvLow"
-                app:layout_constraintEnd_toEndOf="@+id/tvVeryLowNumber"
-                app:layout_constraintStart_toStartOf="@+id/tvVeryLowNumber"
-                app:layout_constraintTop_toTopOf="@+id/tvLow" />
-
-            <ImageView
-                android:id="@+id/ivCircleNormal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:importantForAccessibility="no"
-                android:src="@drawable/ic_circle_normal"
-                app:layout_constraintBottom_toTopOf="@id/tvOver"
-                app:layout_constraintEnd_toStartOf="@id/tvNormal"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvLow"
-                tools:ignore="ImageContrastCheck" />
-
-            <TextView
-                android:id="@+id/tvNormal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="3dp"
-                android:layout_marginTop="3dp"
-                android:fontFamily="@font/montserrat_regular"
-                android:text="@string/normal"
-                android:textColor="@color/black"
-                app:layout_constraintStart_toEndOf="@id/ivCircleNormal"
-                app:layout_constraintTop_toBottomOf="@id/tvLow" />
-
-            <TextView
-                android:id="@+id/tvNormalNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:importantForAccessibility="no"
-                android:fontFamily="@font/montserrat_regular"
-                android:text="@string/_18_5_24_9"
-                android:textColor="@color/black"
-                app:layout_constraintBottom_toBottomOf="@+id/tvNormal"
-                app:layout_constraintEnd_toEndOf="@+id/tvLowNumber"
-                app:layout_constraintStart_toStartOf="@+id/tvLowNumber"
-                app:layout_constraintTop_toTopOf="@+id/tvNormal" />
-
-            <ImageView
-                android:id="@+id/ivCircleOver"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:importantForAccessibility="no"
-                android:src="@drawable/ic_circle_over"
-                app:layout_constraintBottom_toTopOf="@id/tvObeseI"
-                app:layout_constraintEnd_toStartOf="@id/tvOver"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvNormal"
-                tools:ignore="ImageContrastCheck" />
-
-            <TextView
-                android:id="@+id/tvOver"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="3dp"
-                android:layout_marginTop="3dp"
-                android:fontFamily="@font/montserrat_regular"
-                android:text="@string/sobrepeso"
-                android:textColor="@color/black"
-                app:layout_constraintStart_toEndOf="@id/ivCircleOver"
-                app:layout_constraintTop_toBottomOf="@id/tvNormal" />
-
-            <TextView
-                android:id="@+id/tvOverNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:importantForAccessibility="no"
-                android:fontFamily="@font/montserrat_regular"
-                android:text="@string/_25_0_29_9"
-                android:textColor="@color/black"
-                app:layout_constraintBottom_toBottomOf="@+id/tvOver"
-                app:layout_constraintEnd_toEndOf="@+id/tvNormalNumber"
-                app:layout_constraintStart_toStartOf="@+id/tvNormalNumber"
-                app:layout_constraintTop_toTopOf="@+id/tvOver" />
-
-            <ImageView
-                android:id="@+id/ivCircleObeseI"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:importantForAccessibility="no"
-                android:src="@drawable/ic_circle_obese_i"
-                app:layout_constraintBottom_toTopOf="@id/tvObeseII"
-                app:layout_constraintEnd_toStartOf="@id/tvObeseI"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvOver"
-                tools:ignore="ImageContrastCheck" />
-
-            <TextView
-                android:id="@+id/tvObeseI"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="3dp"
-                android:layout_marginTop="3dp"
-                android:fontFamily="@font/montserrat_regular"
-                android:text="@string/obesidade_grau_i"
-                android:textColor="@color/black"
-                app:layout_constraintStart_toEndOf="@id/ivCircleObeseI"
-                app:layout_constraintTop_toBottomOf="@id/tvOver" />
-
-            <TextView
-                android:id="@+id/tvObeseINumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:importantForAccessibility="no"
-                android:fontFamily="@font/montserrat_regular"
-                android:text="@string/_30_0_34_9"
-                android:textColor="@color/black"
-                app:layout_constraintBottom_toBottomOf="@+id/tvObeseI"
-                app:layout_constraintEnd_toEndOf="@+id/tvOverNumber"
-                app:layout_constraintStart_toStartOf="@+id/tvOverNumber"
-                app:layout_constraintTop_toTopOf="@+id/tvObeseI" />
-
-            <ImageView
-                android:id="@+id/ivCircleObeseII"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:importantForAccessibility="no"
-                android:src="@drawable/ic_circle_obese_ii"
-                app:layout_constraintBottom_toTopOf="@id/tvObeseIII"
-                app:layout_constraintEnd_toStartOf="@id/tvObeseII"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvObeseI" />
-
-            <TextView
-                android:id="@+id/tvObeseII"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="3dp"
-                android:layout_marginTop="3dp"
-                android:fontFamily="@font/montserrat_regular"
-                android:text="@string/obesidade_grau_ii"
-                android:textColor="@color/black"
-                app:layout_constraintStart_toEndOf="@id/ivCircleObeseII"
-                app:layout_constraintTop_toBottomOf="@id/tvObeseI" />
-
-            <TextView
-                android:id="@+id/tvObeseIINumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/montserrat_regular"
-                android:importantForAccessibility="no"
-                android:text="@string/_35_0_39_9"
-                android:textColor="@color/black"
-                app:layout_constraintBottom_toBottomOf="@+id/tvObeseII"
-                app:layout_constraintEnd_toEndOf="@+id/tvObeseINumber"
-                app:layout_constraintStart_toStartOf="@+id/tvObeseINumber"
-                app:layout_constraintTop_toTopOf="@+id/tvObeseII" />
-
-            <ImageView
-                android:id="@+id/ivCircleObeseIII"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:importantForAccessibility="no"
-                android:src="@drawable/ic_circle_obese_iii"
+                android:clipToPadding="false"
+                android:paddingHorizontal="80dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/tvObeseIII"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvObeseII" />
+                app:layout_constraintTop_toBottomOf="@id/halfGauge">
+
+                <ImageView
+                    android:id="@+id/ivCircleVeryLow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_circle_very_low"
+                    app:layout_constraintBottom_toTopOf="@id/tvLow"
+                    app:layout_constraintEnd_toStartOf="@id/tvVeryLow"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvVeryLow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="@string/muito_abaixo_do_peso"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@id/ivCircleVeryLow"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvVeryLowNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="@string/_16_0_16_9"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvVeryLow"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvVeryLow" />
+
+                <ImageView
+                    android:id="@+id/ivCircleLow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_circle_low"
+                    app:layout_constraintBottom_toTopOf="@id/tvNormal"
+                    app:layout_constraintEnd_toStartOf="@id/tvLow"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvVeryLow"
+                    tools:ignore="ImageContrastCheck" />
+
+                <TextView
+                    android:id="@+id/tvLow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="@string/abaixo_do_peso"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@id/ivCircleLow"
+                    app:layout_constraintTop_toBottomOf="@id/tvVeryLow" />
+
+                <TextView
+                    android:id="@+id/tvLowNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:importantForAccessibility="no"
+                    android:text="@string/_17_0_18_4"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvLow"
+                    app:layout_constraintEnd_toEndOf="@+id/tvVeryLowNumber"
+                    app:layout_constraintStart_toStartOf="@+id/tvVeryLowNumber"
+                    app:layout_constraintTop_toTopOf="@+id/tvLow" />
+
+                <ImageView
+                    android:id="@+id/ivCircleNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_circle_normal"
+                    app:layout_constraintBottom_toTopOf="@id/tvOver"
+                    app:layout_constraintEnd_toStartOf="@id/tvNormal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvLow"
+                    tools:ignore="ImageContrastCheck" />
+
+                <TextView
+                    android:id="@+id/tvNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="@string/normal"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@id/ivCircleNormal"
+                    app:layout_constraintTop_toBottomOf="@id/tvLow" />
+
+                <TextView
+                    android:id="@+id/tvNormalNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:importantForAccessibility="no"
+                    android:text="@string/_18_5_24_9"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvNormal"
+                    app:layout_constraintEnd_toEndOf="@+id/tvLowNumber"
+                    app:layout_constraintStart_toStartOf="@+id/tvLowNumber"
+                    app:layout_constraintTop_toTopOf="@+id/tvNormal" />
+
+                <ImageView
+                    android:id="@+id/ivCircleOver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_circle_over"
+                    app:layout_constraintBottom_toTopOf="@id/tvObeseI"
+                    app:layout_constraintEnd_toStartOf="@id/tvOver"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvNormal"
+                    tools:ignore="ImageContrastCheck" />
+
+                <TextView
+                    android:id="@+id/tvOver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="@string/sobrepeso"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@id/ivCircleOver"
+                    app:layout_constraintTop_toBottomOf="@id/tvNormal" />
+
+                <TextView
+                    android:id="@+id/tvOverNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:importantForAccessibility="no"
+                    android:text="@string/_25_0_29_9"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvOver"
+                    app:layout_constraintEnd_toEndOf="@+id/tvNormalNumber"
+                    app:layout_constraintStart_toStartOf="@+id/tvNormalNumber"
+                    app:layout_constraintTop_toTopOf="@+id/tvOver" />
+
+                <ImageView
+                    android:id="@+id/ivCircleObeseI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_circle_obese_i"
+                    app:layout_constraintBottom_toTopOf="@id/tvObeseII"
+                    app:layout_constraintEnd_toStartOf="@id/tvObeseI"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvOver"
+                    tools:ignore="ImageContrastCheck" />
+
+                <TextView
+                    android:id="@+id/tvObeseI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="@string/obesidade_grau_i"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@id/ivCircleObeseI"
+                    app:layout_constraintTop_toBottomOf="@id/tvOver" />
+
+                <TextView
+                    android:id="@+id/tvObeseINumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:importantForAccessibility="no"
+                    android:text="@string/_30_0_34_9"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvObeseI"
+                    app:layout_constraintEnd_toEndOf="@+id/tvOverNumber"
+                    app:layout_constraintStart_toStartOf="@+id/tvOverNumber"
+                    app:layout_constraintTop_toTopOf="@+id/tvObeseI" />
+
+                <ImageView
+                    android:id="@+id/ivCircleObeseII"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_circle_obese_ii"
+                    app:layout_constraintBottom_toTopOf="@id/tvObeseIII"
+                    app:layout_constraintEnd_toStartOf="@id/tvObeseII"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvObeseI" />
+
+                <TextView
+                    android:id="@+id/tvObeseII"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="@string/obesidade_grau_ii"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@id/ivCircleObeseII"
+                    app:layout_constraintTop_toBottomOf="@id/tvObeseI" />
+
+                <TextView
+                    android:id="@+id/tvObeseIINumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:importantForAccessibility="no"
+                    android:text="@string/_35_0_39_9"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvObeseII"
+                    app:layout_constraintEnd_toEndOf="@+id/tvObeseINumber"
+                    app:layout_constraintStart_toStartOf="@+id/tvObeseINumber"
+                    app:layout_constraintTop_toTopOf="@+id/tvObeseII" />
+
+                <ImageView
+                    android:id="@+id/ivCircleObeseIII"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_circle_obese_iii"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tvObeseIII"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvObeseII" />
+
+                <TextView
+                    android:id="@+id/tvObeseIII"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="@string/obesidade_grau_iii"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@id/ivCircleObeseIII"
+                    app:layout_constraintTop_toBottomOf="@id/tvObeseII" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="@string/_40"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvObeseIII"
+                    app:layout_constraintEnd_toEndOf="@id/tvObeseIINumber"
+                    app:layout_constraintStart_toStartOf="@id/tvObeseIINumber"
+                    app:layout_constraintTop_toTopOf="@+id/tvObeseIII" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
-                android:id="@+id/tvObeseIII"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="3dp"
-                android:layout_marginTop="3dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="1dp"
                 android:fontFamily="@font/montserrat_regular"
-                android:text="@string/obesidade_grau_iii"
-                android:textColor="@color/black"
-                app:layout_constraintStart_toEndOf="@id/ivCircleObeseIII"
-                app:layout_constraintTop_toBottomOf="@id/tvObeseII" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/montserrat_regular"
-                android:text="@string/_40"
-                android:textColor="@color/black"
-                app:layout_constraintBottom_toBottomOf="@+id/tvObeseIII"
-                app:layout_constraintEnd_toEndOf="@id/tvObeseIINumber"
-                app:layout_constraintStart_toStartOf="@id/tvObeseIINumber"
-                app:layout_constraintTop_toTopOf="@+id/tvObeseIII" />
-
+                android:text="@string/developed_by_fernando_gabriel"
+                android:textColor="@color/grey400"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/clInferior"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:ignore="TextContrastCheck" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="5dp"
-            android:layout_marginBottom="4dp"
-            android:fontFamily="@font/montserrat_regular"
-            android:text="@string/developed_by_fernando_gabriel"
-            android:textColor="@color/grey400"
-            android:textSize="11sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:ignore="TextContrastCheck" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>
