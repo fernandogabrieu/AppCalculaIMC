@@ -14,7 +14,8 @@ Este é meu primeiro aplicativo desenvolvido. A Calculadora de IMC é uma aplica
 ## Capturas de Tela:
 
 
-<img src="./app/images/screenshot1.png" alt="Captura de Tela 1" width="300"/> <img src="./app/images/screenshot2.png" alt="Captura de Tela 2" width="300"/>
+<img src="./app/images/screenshot1.png" alt="Captura de Tela 1" width="300"/> 
+<img src="./app/images/screenshot2.png" alt="Captura de Tela 2" width="300"/>
 <img src="./app/images/screenshot3.png" alt="Captura de Tela 3" width="300"/>
 <img src="./app/images/screenshot4.png" alt="Captura de Tela 4" width="300"/>
 <img src="./app/images/screenshot5.png" alt="Captura de Tela 5" width="300"/>
