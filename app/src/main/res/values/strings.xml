@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">CalculaIMC</string>
+    <string name="calculadora_de_imc">Calculadora de IMC</string>
+    <string name="calcular">Calcular</string>
+    <string name="peso_em_kg">Peso em Kg</string>
+    <string name="abaixo_do_peso">Abaixo do peso</string>
+    <string name="obesidade_grau_i">Obesidade Grau I</string>
+    <string name="obesidade_grau_ii">Obesidade Grau II</string>
+    <string name="obesidade_grau_iii">Obesidade Grau III</string>
+    <string name="sobrepeso">Sobrepeso</string>
+    <string name="muito_abaixo_do_peso">Muito abaixo do peso</string>
+    <string name="limpar">Limpar</string>
+    <string name="_40">≥40</string>
+    <string name="_30_0_34_9">30.0-34.9</string>
+    <string name="_35_0_39_9">35.0-39.9</string>
+    <string name="_25_0_29_9">25.0-29.9</string>
+    <string name="_18_5_24_9">18.5-24.9</string>
+    <string name="normal">Normal</string>
+    <string name="_17_0_18_4">17.0-18.4</string>
+    <string name="_16_0_16_9">16.0-16.9</string>
+    <string name="altura_em_m">Altura em M</string>
+    <string name="developed_by_fernando_gabriel">Developed by: Fernando Gabriel</string>
+</resources>
