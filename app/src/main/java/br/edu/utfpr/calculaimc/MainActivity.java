@@ -2,7 +2,6 @@ package br.edu.utfpr.calculaimc;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -17,12 +16,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.ekn.gruzer.gaugelibrary.HalfGauge;
 import com.ekn.gruzer.gaugelibrary.Range;
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
 
 import java.text.DecimalFormat;
 import java.util.Objects;
 
-/** @noinspection ALL*/
 public class MainActivity extends AppCompatActivity {
 
     private TextInputEditText etPeso;
