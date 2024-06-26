@@ -244,7 +244,6 @@ public class MainActivity extends AppCompatActivity {
         etAltura.setText("");
         tvResultado.setText("");
         tvResultadoEscrito.setText("");
-        tvResultadoEscrito.setTextColor(Color.BLACK);
         tvDiferencaPesoIdeal.setText("");
         main.setBackgroundColor(getColor(R.color.blue700));
         btCalcular.setBackgroundColor(getColor(R.color.DarkBlue));
