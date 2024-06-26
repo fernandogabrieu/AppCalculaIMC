@@ -245,10 +245,10 @@ public class MainActivity extends AppCompatActivity {
         tvResultado.setText("");
         tvResultadoEscrito.setText("");
         tvDiferencaPesoIdeal.setText("");
+        halfGauge.setValue(0.0);
         main.setBackgroundColor(getColor(R.color.blue700));
         btCalcular.setBackgroundColor(getColor(R.color.DarkBlue));
         btLimpar.setBackgroundColor(getColor(R.color.DarkBlue));
-        halfGauge.setValue(0.0);
         etPeso.requestFocus();
     }
 }
